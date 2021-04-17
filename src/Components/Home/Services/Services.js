@@ -5,11 +5,12 @@ import concert from '../../../Images/band.png'
 import party from '../../../Images/bachelor-party.png'
 import iftar from '../../../Images/iftar.png'
 import ServiceCard from '../ServiceCard/ServiceCard';
+import './Services.css'
 
 const serviceData=[
     {
         name: 'Wedding',
-        description: 'Decoration, Cinematography, Party planning, Choreography, Food and everything, We are doing everything you need to think in a traditional Bengali wedding',
+        description: 'Decoration, Cinematography, Party planning, Choreography, Food and everything, We are doing them all for you',
         price: 50000,
         img: wedding
     },
@@ -44,7 +45,7 @@ const Services = () => {
     return (
         <div>
             <h1 className="mt-5 text-center"><span className="brand-color">Services</span> We Provide</h1>
-            <div className="row container-fluid p-5">
+            <div className="row  p-5 content">
                 {
                     serviceData.map(service=> <ServiceCard service={service}></ServiceCard> )
                 }
