@@ -32,8 +32,8 @@ const Navbar = () => {
                 <li class=" me-3  nav-item">
                     <Link  className="nav-link " to="/book/history">History</Link>
                 </li>
-                <li class="me-3 nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
+                <li class=" me-3  nav-item">
+                    <Link  className="nav-link " to="/dashboard/bookingList">Admin</Link>
                 </li>
                 
                 {

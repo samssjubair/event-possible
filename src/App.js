@@ -12,6 +12,9 @@ import { createContext, useState } from 'react';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import Review from './Components/Booking/Review/Review';
 import BookingHistory from './Components/Booking/BookingHistory/BookingHistory';
+import BookingList from './Components/Dashboard/BookingList/BookingList';
+import AddService from './Components/Dashboard/AddService/AddService';
+import ManageService from './Components/Dashboard/ManageService/ManageService';
 export const UserContext=createContext();
 function App() {
   const [loggedInUser,setLoggedInUser]=useState({});
@@ -34,6 +37,15 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/book/history">
               <BookingHistory></BookingHistory>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/bookingList">
+              <BookingList></BookingList>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/addService">
+              <AddService></AddService>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/manageServices">
+              <ManageService></ManageService>
             </PrivateRoute>
             
           </Switch>

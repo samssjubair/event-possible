@@ -17,7 +17,7 @@ const ServiceCard = ({service}) => {
                 <Link style={{textDecoration: 'none'}} to={`/book/service/${service.name}`}>
                 <div class="card">
             
-                    <div className="icon service-card"><img src={service.img} alt=""/></div>
+                    <div className="icon service-card"><img src={`data:image/jpeg;base64,${service.img.img}`} alt=""/></div>
                     <p class="title">{service.name}</p>
                     <p class="text">BDT {service.price}</p>
                     <p class="text">{service.description}</p>
