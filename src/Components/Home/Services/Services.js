@@ -53,6 +53,12 @@ const Services = () => {
             <h1 className="mt-5 text-center"><span className="brand-color">Services</span> We Provide</h1>
             <div className="row  p-5 content">
                 {
+                    services.length===0 && 
+                    <div style={{width: '3rem',height: '3rem',margin: '50px auto'}} class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                }
+                {
                     services.map(service=> <ServiceCard service={service}></ServiceCard> )
                 }
             </div>
