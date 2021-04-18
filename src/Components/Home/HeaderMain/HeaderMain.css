@@ -48,3 +48,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media screen and (max-width: 600px) {
+    .brand-gradient {
+        font-size: 2.5rem;
+    }
+  }
