@@ -40,7 +40,7 @@ const employees=[
     {
         name: 'Jafar',
         email: 'jafar@gmail.com',
-        position: 'Technology Expert',
+        position: 'Tech Expert',
         img: jafar
     }
 ]

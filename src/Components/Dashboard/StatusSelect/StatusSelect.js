@@ -1,6 +1,8 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const StatusSelect = ({id,status}) => {
+    const history=useHistory();
     const handleChange=(e)=>{
         const value=e.target.value;
         fetch(`https://aqueous-dawn-15668.herokuapp.com/updateStatus/${id}`,{
@@ -12,6 +14,7 @@ const StatusSelect = ({id,status}) => {
         .then(data=>{
             if(data){
                 alert("status successfully updated to "+value);
+                history.push("/dashboard/bookingList");
             }
         })
     }

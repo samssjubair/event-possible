@@ -9,7 +9,7 @@ const BookingList = () => {
         fetch("https://aqueous-dawn-15668.herokuapp.com/allBookings")
         .then(res=>res.json())
         .then(data=>setBookings(data))
-    },[])
+    },[bookings])
     return (
         <div className="row container-fluid ps-0">
             <div className="col-md-2">
