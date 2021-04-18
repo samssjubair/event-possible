@@ -40,7 +40,7 @@ const Navbar = () => {
                     loggedInUser.email? 
                     
                     <li style={{marginTop: '0'}} className="nav-item me-5" >
-                        <button className="btn px-4 btn-outline-light">Logout</button>
+                        <button onClick={()=>setLoggedInUser({})} className="btn px-4 btn-outline-light">Logout</button>
                      </li>:
                      <Link style={{marginTop: '0'}} className="nav-item me-5" to="/login">
                         <button className="btn px-4 btn-outline-danger">Login</button>

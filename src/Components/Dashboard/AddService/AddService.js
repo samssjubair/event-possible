@@ -16,8 +16,8 @@ const AddService = () => {
         const newFile=e.target.files[0];
         setFile(newFile);
     }
-    const handleSubmit=()=>{
-        
+    const handleSubmit=(e)=>{
+        e.preventDefault();
         const formData = new FormData()
         formData.append('file', file);
         formData.append('name', info.name);
@@ -32,7 +32,9 @@ const AddService = () => {
         .then(data=>{
           alert("Service added successfully");
           history.push("/");
+          
         })
+        
         
     }
     

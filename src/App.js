@@ -15,6 +15,7 @@ import BookingHistory from './Components/Booking/BookingHistory/BookingHistory';
 import BookingList from './Components/Dashboard/BookingList/BookingList';
 import AddService from './Components/Dashboard/AddService/AddService';
 import ManageService from './Components/Dashboard/ManageService/ManageService';
+import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 export const UserContext=createContext();
 function App() {
   const [loggedInUser,setLoggedInUser]=useState({});
@@ -46,6 +47,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/dashboard/manageServices">
               <ManageService></ManageService>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard/addAdmin">
+              <AddAdmin></AddAdmin>
             </PrivateRoute>
             
           </Switch>

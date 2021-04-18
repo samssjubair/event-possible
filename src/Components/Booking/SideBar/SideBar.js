@@ -4,8 +4,10 @@ import "./SideBar.css";
 import logo from '../../../Images/white-logo.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCog,
-  faSignOutAlt,
+  faTable,
+  faPlus,
+  faUserCog,
+  faTasks,
   faHistory,
   faGripHorizontal,
   faQuoteRight,
@@ -34,6 +36,27 @@ const SideBar = () => {
         <li>
           <Link style={{textDecoration: 'none'}}  to="/book/review" className="text-white">
             <FontAwesomeIcon icon={faQuoteRight} /> <span>Review</span>
+          </Link>
+        </li>
+        <li>
+          <Link style={{textDecoration: 'none'}} to="/dashboard/bookingList"  className="text-white">
+            <FontAwesomeIcon icon={faTable} /> <span>Booking List</span>
+          </Link>
+        </li>
+
+        <li>
+          <Link style={{textDecoration: 'none'}} to="/dashboard/addService" className="text-white">
+            <FontAwesomeIcon icon={faPlus} /> <span>Add A Service</span>
+          </Link>
+        </li>
+        <li>
+          <Link style={{textDecoration: 'none'}}  to="/dashboard/addAdmin" className="text-white">
+            <FontAwesomeIcon icon={faUserCog} /> <span>Add an Admin</span>
+          </Link>
+        </li>
+        <li>
+          <Link style={{textDecoration: 'none'}}  to="/dashboard/manageServices" className="text-white">
+            <FontAwesomeIcon icon={faTasks} /> <span>Manage Services</span>
           </Link>
         </li>
       </ul>
