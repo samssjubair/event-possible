@@ -1,10 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../Images/white-logo.png'
 
 const Navbar = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+    
+  const [isAdmin,setIsAdmin]=useState(false)
+  useEffect(()=>{
+    fetch("http://localhost:5055/isAdmin",{
+      method: "POST",
+      headers: {"Content-type": "application/json"},
+      body: JSON.stringify({email: loggedInUser.email})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      setIsAdmin(data)
+    })
+  },[loggedInUser.email])
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
@@ -21,19 +34,17 @@ const Navbar = () => {
                 </li>
                 
                 <li class="me-3 nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="me-3 nav-item">
-                <a class="nav-link" href="#">Our Team</a>
+                <a class="nav-link" href="#employee">Our Team</a>
                 </li>
                 <li class="me-3 nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
+                
                 <li class=" me-3  nav-item">
-                    <Link  className="nav-link " to="/book/history">History</Link>
-                </li>
-                <li class=" me-3  nav-item">
-                    <Link  className="nav-link " to="/dashboard/bookingList">Admin</Link>
+                    <Link  className="nav-link " to={isAdmin? "/dashboard/bookingList": "/book/history"}>Dashboard</Link>
                 </li>
                 
                 {

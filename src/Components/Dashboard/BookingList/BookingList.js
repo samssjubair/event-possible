@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SideBar from '../../Booking/SideBar/SideBar';
 import BookingListTable from '../BookingListTable/BookingListTable';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -12,7 +13,7 @@ const BookingList = () => {
     return (
         <div className="row container-fluid ps-0">
             <div className="col-md-2">
-                <Sidebar></Sidebar>
+                <SideBar></SideBar>
             </div>
             <div className="col-md-10 text-center">
                 <h1 className="my-5">All <span className="brand-color">Bookings</span></h1>

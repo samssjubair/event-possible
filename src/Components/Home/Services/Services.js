@@ -49,7 +49,7 @@ const Services = () => {
         .then(data=>setServices(data))
     },[services])
     return (
-        <div>
+        <div id="services">
             <h1 className="mt-5 text-center"><span className="brand-color">Services</span> We Provide</h1>
             <div className="row  p-5 content">
                 {

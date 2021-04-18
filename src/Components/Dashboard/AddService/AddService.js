@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
+import SideBar from "../../Booking/SideBar/SideBar";
 import Sidebar from "../Sidebar/Sidebar";
 
 const AddService = () => {
@@ -41,7 +42,7 @@ const AddService = () => {
   return (
     <div className="row container-fluid ps-0">
       <div className="col-md-2">
-        <Sidebar></Sidebar>
+        <SideBar></SideBar>
       </div>
       <div className="col-md-10">
         <h1 className="text-center my-4">

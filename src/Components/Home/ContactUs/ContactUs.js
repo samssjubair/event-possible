@@ -17,7 +17,7 @@ const ContactUs = () => {
 
     }
     return (
-        <div className="text-center mt-5 bg-dark p-5">
+        <div id="contact" className="text-center mt-5 bg-dark p-5">
             <div className="mb-5 text-light">
                 <h2>Want to know more?</h2>
                 <h1><span className="brand-color">Email</span> Us</h1>

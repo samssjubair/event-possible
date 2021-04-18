@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import SideBar from "../../Booking/SideBar/SideBar";
 import Sidebar from "../Sidebar/Sidebar";
 
 const AddAdmin = () => {
@@ -25,7 +26,7 @@ const AddAdmin = () => {
   return (
     <div className="row ps-0 container-fluid">
       <div className="col-md-2">
-        <Sidebar></Sidebar>
+        <SideBar></SideBar>
       </div>
       <div className="col-md-10 text-center">
         <h1 className="my-4">

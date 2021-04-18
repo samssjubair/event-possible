@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SideBar from '../../Booking/SideBar/SideBar';
 import ServiceTable from '../ServiceTable/ServiceTable';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -12,7 +13,7 @@ const ManageService = () => {
     return (
         <div className="row ps-0 container-fluid">
             <div className="col-md-2">
-                <Sidebar></Sidebar>
+                <SideBar></SideBar>
             </div>
             <div className="col-md-10 text-center">
                 <h1 className="my-5">Manage <span className="brand-color">Services</span></h1>

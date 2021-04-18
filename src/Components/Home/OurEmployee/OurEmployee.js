@@ -47,7 +47,7 @@ const employees=[
 
 const OurEmployee = () => {
     return (
-        <div className="container-fluid text-center">
+        <div id="employee" className="container-fluid text-center">
             <h1 className="  my-5">Our <span className="brand-color">Team</span></h1>
             <div className="row w-75 mx-auto">
                 {
