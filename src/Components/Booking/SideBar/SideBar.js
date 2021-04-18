@@ -35,7 +35,9 @@ const SideBar = () => {
     >
       
       <ul  className="list-unstyled">
+      <Link to="/">
       <img style={{height: '80px',marginBottom: '30px'}} src={logo} alt=""/>
+      </Link>
         { isAdmin || <div>
           <li>
             <Link style={{textDecoration: 'none'}} to="/book/history"  className="text-white">

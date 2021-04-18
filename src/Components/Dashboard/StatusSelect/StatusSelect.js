@@ -14,6 +14,7 @@ const StatusSelect = ({id,status}) => {
         .then(data=>{
             if(data){
                 alert("status successfully updated to "+value);
+                e.target.value=value;
                 history.push("/dashboard/bookingList");
             }
         })

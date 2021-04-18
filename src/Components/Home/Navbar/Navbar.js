@@ -21,9 +21,9 @@ const Navbar = () => {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="ms-5 navbar-brand" href="#">
+            <Link to="/" class="ms-5 navbar-brand" href="#">
                 <img style={{height: '50px'}} src={logo} alt=""/>
-            </a>
+            </Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
