@@ -8,7 +8,7 @@ const BookingHistory = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     const [userHistory,setUserHistory]=useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5055/userBookings",{
+        fetch("https://aqueous-dawn-15668.herokuapp.com/userBookings",{
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({email: loggedInUser.email})

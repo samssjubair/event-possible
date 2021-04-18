@@ -3,7 +3,7 @@ import React from 'react';
 const StatusSelect = ({id,status}) => {
     const handleChange=(e)=>{
         const value=e.target.value;
-        fetch(`http://localhost:5055/updateStatus/${id}`,{
+        fetch(`https://aqueous-dawn-15668.herokuapp.com/updateStatus/${id}`,{
             method: "PATCH",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({value})

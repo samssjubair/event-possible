@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const BookingList = () => {
     const [bookings,setBookings]=useState([]);
     useState(()=>{
-        fetch("http://localhost:5055/allBookings")
+        fetch("https://aqueous-dawn-15668.herokuapp.com/allBookings")
         .then(res=>res.json())
         .then(data=>setBookings(data))
     },[])

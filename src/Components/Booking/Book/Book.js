@@ -26,7 +26,7 @@ const Book = () => {
       bookTime: new Date()
     };
     console.log(bookingDetail);
-    fetch("http://localhost:5055/addBooking", {
+    fetch("https://aqueous-dawn-15668.herokuapp.com/addBooking", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(bookingDetail),

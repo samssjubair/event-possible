@@ -5,7 +5,7 @@ import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const ServiceTable = ({services}) => {
     const handleDelete=(id)=>{
-        fetch("http://localhost:5055/deleteService",{
+        fetch("https://aqueous-dawn-15668.herokuapp.com/deleteService",{
             method: 'DELETE',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({id})

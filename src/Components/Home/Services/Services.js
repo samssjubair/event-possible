@@ -44,7 +44,7 @@ import './Services.css'
 const Services = () => {
     const [services,setServices]=useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5055/allServices")
+        fetch("https://aqueous-dawn-15668.herokuapp.com/allServices")
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[services])

@@ -11,7 +11,7 @@ const Review = () => {
   const onSubmit = (data) => {
     const newReview= {...data, img: loggedInUser.img};
     console.log(newReview);
-    fetch('http://localhost:5055/addReview',{
+    fetch('https://aqueous-dawn-15668.herokuapp.com/addReview',{
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(newReview)

@@ -31,7 +31,7 @@ import TestimonialCard from "../TestimonialCard/TestimonialCard";
 const Testimonials = () => {
   const [reviews,setReviews]=useState([]);
   useEffect(()=>{
-    fetch('http://localhost:5055/allReviews')
+    fetch('https://aqueous-dawn-15668.herokuapp.com/allReviews')
     .then(res=>res.json())
     .then(data=> setReviews(data))
   },[reviews])
