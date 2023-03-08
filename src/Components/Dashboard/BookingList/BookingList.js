@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const BookingList = () => {
     const [bookings,setBookings]=useState([]);
     useState(()=>{
-        fetch("https://event-possible.onrender.com/allBookings")
+        fetch("https://event-possible.up.railway.app/allBookings")
         .then(res=>res.json())
         .then(data=>setBookings(data))
     },[bookings])

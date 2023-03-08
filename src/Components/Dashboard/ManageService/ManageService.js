@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const ManageService = () => {
     const [services,setServices]=useState([]);
     useEffect(()=>{
-        fetch("https://event-possible.onrender.com/allServices")
+        fetch("https://event-possible.up.railway.app/allServices")
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[services])

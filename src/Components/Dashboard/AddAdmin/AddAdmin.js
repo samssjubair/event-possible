@@ -12,7 +12,7 @@ const AddAdmin = () => {
   } = useForm();
   const onSubmit = (data) => {
       const email=data.email;
-      fetch("https://event-possible.onrender.com/addAdmin",{
+      fetch("https://event-possible.up.railway.app/addAdmin",{
           method: 'POST',
           headers: {'content-type': 'application/json'},
           body: JSON.stringify({email})

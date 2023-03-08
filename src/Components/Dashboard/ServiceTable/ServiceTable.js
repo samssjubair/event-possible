@@ -5,7 +5,7 @@ import {faTrash} from '@fortawesome/free-solid-svg-icons'
 
 const ServiceTable = ({services}) => {
     const handleDelete=(id)=>{
-        fetch("https://event-possible.onrender.com/deleteService",{
+        fetch("https://event-possible.up.railway.app/deleteService",{
             method: 'DELETE',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({id})

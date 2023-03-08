@@ -5,7 +5,7 @@ const StatusSelect = ({id,status}) => {
     const history=useHistory();
     const handleChange=(e)=>{
         const value=e.target.value;
-        fetch(`https://event-possible.onrender.com/updateStatus/${id}`,{
+        fetch(`https://event-possible.up.railway.app/updateStatus/${id}`,{
             method: "PATCH",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({value})

@@ -11,7 +11,7 @@ const Review = () => {
   const onSubmit = (data) => {
     const newReview= {...data, img: loggedInUser.img};
     console.log(newReview);
-    fetch('https://event-possible.onrender.com/addReview',{
+    fetch('https://event-possible.up.railway.app/addReview',{
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify(newReview)

@@ -7,17 +7,17 @@ const Navbar = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     
   const [isAdmin,setIsAdmin]=useState(false)
-//   useEffect(()=>{
-//     fetch("https://event-possible.onrender.com/isAdmin",{
-//       method: "POST",
-//       headers: {"Content-type": "application/json"},
-//       body: JSON.stringify({email: loggedInUser.email})
-//     })
-//     .then(res=>res.json())
-//     .then(data=>{
-//       setIsAdmin(data)
-//     })
-//   },[loggedInUser.email])
+  useEffect(()=>{
+    fetch("https://event-possible.up.railway.app/isAdmin",{
+      method: "POST",
+      headers: {"Content-type": "application/json"},
+      body: JSON.stringify({email: loggedInUser.email})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      setIsAdmin(data)
+    })
+  },[loggedInUser.email])
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">

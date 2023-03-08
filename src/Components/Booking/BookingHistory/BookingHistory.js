@@ -8,7 +8,7 @@ const BookingHistory = () => {
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     const [userHistory,setUserHistory]=useState([]);
     useEffect(()=>{
-        fetch("https://event-possible.onrender.com/userBookings",{
+        fetch("https://event-possible.up.railway.app/userBookings",{
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({email: loggedInUser.email})

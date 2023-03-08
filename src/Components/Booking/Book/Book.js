@@ -26,7 +26,7 @@ const Book = () => {
       bookTime: new Date()
     };
     console.log(bookingDetail);
-    fetch("https://event-possible.onrender.com/addBooking", {
+    fetch("https://event-possible.up.railway.app/addBooking", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(bookingDetail),

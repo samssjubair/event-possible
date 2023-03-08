@@ -25,7 +25,7 @@ const AddService = () => {
         formData.append('price', info.price);
         formData.append('description',info.description)
       
-        fetch('https://event-possible.onrender.com/addService', {
+        fetch('https://event-possible.up.railway.app/addService', {
           method: 'POST',
           body: formData
         })
