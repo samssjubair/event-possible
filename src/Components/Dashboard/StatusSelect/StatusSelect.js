@@ -5,7 +5,11 @@ const StatusSelect = ({id,status}) => {
     const history=useHistory();
     const handleChange=(e)=>{
         const value=e.target.value;
+<<<<<<< HEAD
+        fetch(`https://event-possible.up.railway.app/updateStatus/${id}`,{
+=======
         fetch(`https://aqueous-dawn-15668.herokuapp.com/updateStatus/${id}`,{
+>>>>>>> c6fd745f5c466065ee625b0fe018aa41b266f11e
             method: "PATCH",
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({value})
