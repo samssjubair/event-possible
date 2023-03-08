@@ -12,7 +12,11 @@ const AddAdmin = () => {
   } = useForm();
   const onSubmit = (data) => {
       const email=data.email;
+<<<<<<< HEAD
       fetch("https://event-possible.up.railway.app/addAdmin",{
+=======
+      fetch("https://aqueous-dawn-15668.herokuapp.com/addAdmin",{
+>>>>>>> c6fd745f5c466065ee625b0fe018aa41b266f11e
           method: 'POST',
           headers: {'content-type': 'application/json'},
           body: JSON.stringify({email})
